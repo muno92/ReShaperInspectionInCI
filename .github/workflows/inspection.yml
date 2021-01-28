@@ -15,6 +15,6 @@ jobs:
       - name: Run Inspection
         run: jb inspectcode ReShaperInspectionInCI.sln -o=result.xml
       - name: Set Output Format
-        run: echo "::add-matcher::resharper_xml_output.json"
+        run: echo "::add-matcher::.github/resharper_xml_output.json"
       - name: Output Inspection Result
         run: cat result.txt >&2
