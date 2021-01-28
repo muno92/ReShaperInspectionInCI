@@ -13,7 +13,7 @@ jobs:
       - name: Install ReSharper Command Line Tool
         run: dotnet tool install -g JetBrains.ReSharper.GlobalTools
       - name: Run Inspection
-        run: jb inspectcode ReShaperInspectionInCI.sln -o=result.xml
+        run: jb inspectcode ReShaperInspectionInCI.sln -o=result.xml -a
       - name: Set Output Format
         run: echo "::add-matcher::.github/resharper_xml_output.json"
       - name: Output Inspection Result
