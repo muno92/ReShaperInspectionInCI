@@ -17,4 +17,4 @@ jobs:
       - name: Set Output Format
         run: echo "::add-matcher::.github/resharper_xml_output.json"
       - name: Output Inspection Result
-        run: cat result.txt >&2
+        run: cat result.xml
