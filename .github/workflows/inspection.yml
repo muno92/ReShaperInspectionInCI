@@ -3,7 +3,7 @@ name: Incpection
 on: [push,pull_request]
 
 jobs:
-  check:
+  inspection:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
