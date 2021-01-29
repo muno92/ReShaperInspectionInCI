@@ -18,3 +18,5 @@ jobs:
         run: echo "::add-matcher::.github/resharper_xml_output.json"
       - name: Output Inspection Result
         run: cat result.xml
+      - name: Exit on failure if issue is exist
+        run: if grep -Eq '<Issue [^>]+>' result.xml; then exit 1; fi
