@@ -11,6 +11,10 @@ namespace ReShaperInspectionInCI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        private int UnusedField;
+
+        public string TooOpenField;
+        
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -21,6 +25,7 @@ namespace ReShaperInspectionInCI.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
+            TooOpenField = "this is field should be private.";
         }
 
         [HttpGet]
