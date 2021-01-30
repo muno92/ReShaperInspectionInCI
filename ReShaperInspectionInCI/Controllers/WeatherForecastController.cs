@@ -26,6 +26,7 @@ namespace ReShaperInspectionInCI.Controllers
         {
             _logger = logger;
             TooOpenField = "this is field should be private.";
+            var unusedVariable = "test";
         }
 
         [HttpGet]
